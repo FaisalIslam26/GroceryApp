@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: title,
-      // home: filterScreen(),
-      home: AccountScreen(),
+      home: filterScreen(),
+      // home: AccountScreen(),
     );
   }
 }

@@ -14,7 +14,6 @@ class filterScreen extends StatefulWidget {
 
 class _filterScreenState extends State<filterScreen> {
   bool isTap = false;
-  bool isclick = true;
 
   Map<String, bool> categories = {
     'Eggs': false,
@@ -58,7 +57,6 @@ class _filterScreenState extends State<filterScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Expanded(
-              flex: 1,
               child: Container(
                 width: double.infinity,
                 height: 680,
@@ -86,12 +84,8 @@ class _filterScreenState extends State<filterScreen> {
                             .map((ItemName) => CheckboxListTile(
                                   autofocus: true,
                                   selected: false,
-                                  tristate: true,
-
-                                  // dense: true,
                                   tileColor: Colors.red,
                                   activeColor: Colors.green,
-                                  checkColor: Colors.white,
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(8.0))),
@@ -123,10 +117,6 @@ class _filterScreenState extends State<filterScreen> {
                                         ListTileControlAffinity.leading,
                                     title: Text(
                                       ItemName,
-                                      style: TextStyle(
-                                          color: isTap
-                                              ? Colors.green
-                                              : Colors.black),
                                     ),
                                     value: brand[ItemName],
                                     onChanged: (bool? value) {
