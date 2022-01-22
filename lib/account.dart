@@ -95,7 +95,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   );
                 },
                 itemCount: title.length,
-                // scrollDirection: Axis.vertical,
+                scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) {
                   return ListTile(
                     onTap: () {},
