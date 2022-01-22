@@ -83,7 +83,7 @@ class _filterScreenState extends State<filterScreen> {
                         children: categories.keys
                             .map((ItemName) => CheckboxListTile(
                                   autofocus: true,
-                                  selected: false,
+                                  selected: true,
                                   tileColor: Colors.red,
                                   activeColor: Colors.green,
                                   shape: RoundedRectangleBorder(
@@ -91,7 +91,13 @@ class _filterScreenState extends State<filterScreen> {
                                           Radius.circular(8.0))),
                                   controlAffinity:
                                       ListTileControlAffinity.leading,
-                                  title: Text(ItemName),
+                                  title: Text(
+                                    ItemName,
+                                    style: TextStyle(
+                                        color: categories[ItemName]!
+                                            ? Colors.green
+                                            : Colors.black),
+                                  ),
                                   value: categories[ItemName],
                                   onChanged: (bool? value) {
                                     setState(() {
@@ -117,6 +123,10 @@ class _filterScreenState extends State<filterScreen> {
                                         ListTileControlAffinity.leading,
                                     title: Text(
                                       ItemName,
+                                      style: TextStyle(
+                                          color: brand[ItemName]!
+                                              ? Colors.green
+                                              : Colors.black),
                                     ),
                                     value: brand[ItemName],
                                     onChanged: (bool? value) {
