@@ -4,6 +4,7 @@ import 'package:groceriesapp/bottomnav.dart';
 import 'package:groceriesapp/filterscreen.dart';
 import 'package:groceriesapp/login.dart';
 import 'package:groceriesapp/mycart.dart';
+import 'package:groceriesapp/product_detail.dart';
 import 'package:groceriesapp/signin.dart';
 import 'package:groceriesapp/signup.dart';
 import 'package:groceriesapp/start_screen.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       // // home: BottomNavBar(),
       // // home: StartScreen(),
       // home: SignUpScreen(),
-      home: MyCart(),
+      home: ProductDetails(),
 
       // initialRoute: SigninScreen.path,
       // routes: {
