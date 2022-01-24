@@ -87,8 +87,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         color: Color(0xfff7C7C7C),
                         fontSize: 16,
                       ),
-                      suffixIcon: InkWell(
-                          onTap: _togglePasswordView, child: Icon(Icons.check)),
+                      suffixIcon:
+                          InkWell(onTap: () {}, child: Icon(Icons.check)),
                       border: InputBorder.none,
                       disabledBorder: InputBorder.none,
                       focusedBorder: UnderlineInputBorder(
@@ -124,10 +124,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: Text(
-                      "By continuing you agree with our Terms of Service and Privacy Policy"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                        "By continuing you agree with our Terms of Service and Privacy Policy"),
+                  ],
                 ),
                 SizedBox(
                   height: 10,
