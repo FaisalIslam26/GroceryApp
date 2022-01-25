@@ -64,7 +64,6 @@ class _ProductDetailsState extends State<ProductDetails> {
                         child: Center(
                           child: Image.asset(
                             imgUrl,
-                            scale: 1,
                             fit: BoxFit.cover,
                             width: MediaQuery.of(context).size.width,
                             height: 300,
